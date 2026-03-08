@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cmvh4fu6nsark"]
+
+[ext_resource type="Script" uid="uid://dtvexo0y1rn3d" path="res://game/characters/harini/character_harini.gd" id="1_2q8dq"]
+[ext_resource type="Texture2D" uid="uid://b8r3tt8spwtfs" path="res://game/characters/a/character_a_img.png" id="2_rset1"]
+
+[node name="CharacterHarini" type="Area2D" unique_id=316602054]
+script = ExtResource("1_2q8dq")
+dialog_pos = Vector2(-0.7999878, -97.99567)
+popochiu_placeholder = null
+script_name = "Harini"
+description = "Harini"
+cursor = 8
+interaction_polygon = PackedVector2Array(-43, -72, 55, -70, 51, 63, -38, 63)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=571307706]
+polygon = PackedVector2Array(-43, -72, 55, -70, 51, 63, -38, 63)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1035784509]
+position = Vector2(0.9999962, 2.0000057)
+scale = Vector2(4.7, 6.5000005)
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2033732791]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=807743576]
+texture_filter = 1
+texture = ExtResource("2_rset1")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c4xk5t0fubjit"]
+
+[ext_resource type="Script" uid="uid://c50x1nvsk0oa6" path="res://game/rooms/hallway/props/plant/prop_plant.gd" id="1_7vgvd"]
+[ext_resource type="Texture2D" uid="uid://b2t7tlf5lnsvs" path="res://game/rooms/hallway/props/plant/plant.png" id="2_efb76"]
+
+[node name="Plant" type="Area2D" unique_id=102191419]
+script = ExtResource("1_7vgvd")
+script_name = "Plant"
+description = "Plant"
+cursor = 1
+interaction_polygon = PackedVector2Array(-115, -334, 96, -334, 99, 5, -113, 5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=831064503]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-115, -334, 96, -334, 99, 5, -113, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1881688029]
+texture_filter = 1
+position = Vector2(0, -159)
+texture = ExtResource("2_efb76")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1544533925]

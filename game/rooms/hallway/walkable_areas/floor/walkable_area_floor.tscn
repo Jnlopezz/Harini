@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://brmal0yoc8l7s"]
+
+[ext_resource type="Script" uid="uid://bo2ssxtvyc30j" path="res://game/rooms/hallway/walkable_areas/floor/walkable_area_floor.gd" id="1_mf1hx"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_cuk0c"]
+vertices = PackedVector2Array(550, 52, 549, 18, 943, 22, 939, 522, 348, 52, -944, 519, -701, 75, -700, 20, 349, 21, -946, 19, -901, 20, -903, 76)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5, 6), PackedInt32Array(7, 8, 4, 6), PackedInt32Array(5, 9, 10, 11), PackedInt32Array(6, 5, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-946, 19, -944, 519, 939, 522, 943, 22, 549, 18, 550, 52, 348, 52, 349, 21, -700, 20, -701, 75, -903, 76, -901, 20)])
+agent_radius = 0.0
+
+[node name="Floor" type="Node2D" unique_id=1600731184]
+position = Vector2(960, 540)
+script = ExtResource("1_mf1hx")
+script_name = "Floor"
+description = "Floor"
+interaction_polygon = [PackedVector2Array(-946, 19, -944, 519, 939, 522, 943, 22, 549, 18, 550, 52, 348, 52, 349, 21, -700, 20, -701, 75, -903, 76, -901, 20)]
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=818564340]
+visible = false
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_cuk0c")

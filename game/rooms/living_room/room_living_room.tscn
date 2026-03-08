@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://vb150vufwm4j"]
+
+[ext_resource type="Script" uid="uid://bbwvyqxjdjfm2" path="res://game/rooms/living_room/room_living_room.gd" id="1_4vobw"]
+[ext_resource type="Texture2D" uid="uid://bglboasy5b35u" path="res://game/rooms/living_room/livingroom.png" id="2_m8624"]
+[ext_resource type="PackedScene" uid="uid://bl31vchn5bkay" path="res://game/characters/a/character_a.tscn" id="3_e27ab"]
+[ext_resource type="PackedScene" uid="uid://chjoxk42ccl6h" path="res://game/rooms/living_room/walkable_areas/living_room_floor/walkable_area_living_room_floor.tscn" id="3_r472r"]
+
+[node name="RoomLivingRoom" type="Node2D" unique_id=1632879064]
+script = ExtResource("1_4vobw")
+script_name = "LivingRoom"
+width = 6581
+height = 1080
+popochiu_placeholder = null
+
+[node name="LivingRoom" type="Sprite2D" parent="." unique_id=1294532996]
+position = Vector2(960, 540)
+texture = ExtResource("2_m8624")
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1204536496]
+
+[node name="LivingRoomFloor" parent="WalkableAreas" unique_id=601364885 instance=ExtResource("3_r472r")]
+
+[node name="Props" type="Node2D" parent="." unique_id=1373748295]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1305038800]
+
+[node name="Regions" type="Node2D" parent="." unique_id=2019445524]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1699249011]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1236033255]
+
+[node name="CharacterA *" parent="Characters" unique_id=137430090 instance=ExtResource("3_e27ab")]
+position = Vector2(-1970, 851)

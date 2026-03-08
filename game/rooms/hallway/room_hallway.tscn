@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cdp2pkwrki55h"]
+
+[ext_resource type="Script" uid="uid://b0wj03l4fbb1o" path="res://game/rooms/hallway/room_hallway.gd" id="1_4ggin"]
+[ext_resource type="PackedScene" uid="uid://brmal0yoc8l7s" path="res://game/rooms/hallway/walkable_areas/floor/walkable_area_floor.tscn" id="3_fiaps"]
+[ext_resource type="PackedScene" uid="uid://c4xk5t0fubjit" path="res://game/rooms/hallway/props/plant/prop_plant.tscn" id="4_cuvbn"]
+[ext_resource type="PackedScene" uid="uid://bl31vchn5bkay" path="res://game/characters/a/character_a.tscn" id="4_l1phu"]
+[ext_resource type="PackedScene" uid="uid://ci858dn7ib4t2" path="res://game/rooms/hallway/props/shoe_rack/prop_shoe_rack.tscn" id="6_bve4o"]
+[ext_resource type="Texture2D" uid="uid://dpso3fv8oaj5v" path="res://game/rooms/hallway/props/shoe_rack/shoe_rack.png" id="7_64380"]
+[ext_resource type="PackedScene" uid="uid://da2xds5vuki2h" path="res://game/rooms/hallway/props/door/prop_door.tscn" id="8_c54hp"]
+[ext_resource type="Texture2D" uid="uid://bbnkxud6m7tq6" path="res://game/rooms/hallway/props/door/door.png" id="9_sn6o8"]
+[ext_resource type="PackedScene" uid="uid://caf0xo55lij2j" path="res://game/rooms/hallway/props/doormat/prop_doormat.tscn" id="10_j7qso"]
+[ext_resource type="Texture2D" uid="uid://fcatdylhn7ub" path="res://game/rooms/hallway/props/doormat/mat.png" id="11_n8bug"]
+[ext_resource type="PackedScene" uid="uid://cltyblk5v8tq2" path="res://game/rooms/hallway/props/digilock/prop_digilock.tscn" id="12_pkmkg"]
+[ext_resource type="Texture2D" uid="uid://gu60cmnlihxo" path="res://game/rooms/hallway/props/digilock/digital_lock.png" id="13_osdrp"]
+[ext_resource type="PackedScene" uid="uid://bvc5w3j0u20wr" path="res://game/rooms/hallway/props/background/prop_background.tscn" id="14_iwh4p"]
+[ext_resource type="Texture2D" uid="uid://b4s20qaiwjw63" path="res://game/rooms/hallway/props/background/hallway_bg.png" id="15_8yavk"]
+
+[node name="RoomHallway" type="Node2D" unique_id=2032109336]
+script = ExtResource("1_4ggin")
+script_name = "Hallway"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=998036852]
+
+[node name="Floor" parent="WalkableAreas" unique_id=1600731184 instance=ExtResource("3_fiaps")]
+
+[node name="Props" type="Node2D" parent="." unique_id=1265895168]
+
+[node name="Plant" parent="Props" unique_id=102191419 instance=ExtResource("4_cuvbn")]
+position = Vector2(160, 612)
+walk_to_point = Vector2(4.6769104, 14.030762)
+
+[node name="ShoeRack" parent="Props" unique_id=222475139 instance=ExtResource("6_bve4o")]
+position = Vector2(1411, 509)
+texture = ExtResource("7_64380")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Door" parent="Props" unique_id=259285491 instance=ExtResource("8_c54hp")]
+position = Vector2(1664, 316)
+texture = ExtResource("9_sn6o8")
+baseline = 220
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Doormat" parent="Props" unique_id=716934331 instance=ExtResource("10_j7qso")]
+position = Vector2(1672, 628)
+texture = ExtResource("11_n8bug")
+baseline = -85
+look_at_point = Vector2(-0.00012207, -2.24493)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Digilock" parent="Props" unique_id=1865346764 instance=ExtResource("12_pkmkg")]
+position = Vector2(1456, 316)
+texture = ExtResource("13_osdrp")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Background" parent="Props" unique_id=1399820022 instance=ExtResource("14_iwh4p")]
+position = Vector2(960, 540)
+texture = ExtResource("15_8yavk")
+baseline = 542
+interaction_polygon = PackedVector2Array(-882, 62, -721, 62, -720, -17, -882, -13)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1181045941]
+
+[node name="Regions" type="Node2D" parent="." unique_id=1016067004]
+
+[node name="Markers" type="Node2D" parent="." unique_id=118256416]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1321494231]
+
+[node name="CharacterA *" parent="Characters" unique_id=2030062674 instance=ExtResource("4_l1phu")]
+position = Vector2(112, 1004)

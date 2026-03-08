@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dlbfedr2qnwr7"]
+
+[ext_resource type="Script" path="res://game/characters/harini/character_harini_state.gd" id="1_7qgff"]
+
+[resource]
+resource_name = "Harini"
+script = ExtResource("1_7qgff")
+script_name = "Harini"
+scene = "res://game/characters/harini/character_harini.tscn"

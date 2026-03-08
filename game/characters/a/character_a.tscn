@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bl31vchn5bkay"]
+
+[ext_resource type="Script" uid="uid://bb5edwqf4tluy" path="res://game/characters/a/character_a.gd" id="1_exvlq"]
+[ext_resource type="Texture2D" uid="uid://b8r3tt8spwtfs" path="res://game/characters/a/character_a_img.png" id="2_hi6b5"]
+
+[node name="CharacterA" type="Area2D" unique_id=795174716]
+input_pickable = false
+script = ExtResource("1_exvlq")
+walk_speed = 500.0
+dialog_pos = Vector2(0, -150)
+popochiu_placeholder = null
+script_name = "A"
+description = "A"
+clickable = false
+cursor = 8
+always_on_top = true
+interaction_polygon = PackedVector2Array(-44, -139, 46, -139, 44, -2, -44, -1)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=257534191]
+visible = false
+polygon = PackedVector2Array(-44, -139, 46, -139, 44, -2, -44, -1)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=822313683]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=957481956]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=633449507]
+texture_filter = 1
+position = Vector2(0, -64)
+texture = ExtResource("2_hi6b5")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://chjoxk42ccl6h"]
+
+[ext_resource type="Script" uid="uid://d0hoi30wvgo1e" path="res://game/rooms/living_room/walkable_areas/living_room_floor/walkable_area_living_room_floor.gd" id="1_nmsac"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3ujev"]
+vertices = PackedVector2Array(3298, 18, 3294, 519, -3290, 529, -3292, 10)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-3290, 529, 3294, 519, 3298, 18, -3292, 10)])
+agent_radius = 0.0
+
+[node name="LivingRoomFloor" type="Node2D" unique_id=601364885]
+position = Vector2(960, 540)
+script = ExtResource("1_nmsac")
+script_name = "LivingRoomFloor"
+description = "Living Room Floor"
+interaction_polygon = [PackedVector2Array(-3290, 529, 3294, 519, 3298, 18, -3292, 10)]
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1051596204]
+visible = false
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_3ujev")
