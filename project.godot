@@ -68,6 +68,7 @@ popochiu-skip={
 [popochiu]
 
 pixel/pixel_art_textures=true
+gui/experimental_scale_gui=true
 
 [rendering]
 

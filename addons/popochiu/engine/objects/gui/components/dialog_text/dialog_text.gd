@@ -25,6 +25,7 @@ var _x_limit := 0.0
 var _y_limit := 0.0
 
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
+@onready var character_name_label: RichTextLabel = %NameLabel
 @onready var continue_icon: TextureProgressBar = %ContinueIcon
 @onready var continue_icon_size := continue_icon.texture_progress.get_size()
 
@@ -157,6 +158,7 @@ func _show_dialogue(chr: PopochiuCharacter, msg := "") -> void:
 	play_text({
 		text = msg,
 		color = chr.text_color,
+		character = chr.name,
 		position = PopochiuUtils.get_screen_coords_for(chr, chr.dialog_pos).floor() / (
 			PopochiuUtils.e.scale if PopochiuUtils.e.settings.scale_gui else Vector2.ONE
 		),
